@@ -1,0 +1,67 @@
+.footer {
+  font-size: 1.2rem;
+  background: #000;
+  color: white;
+  padding: 20px 0 15px;
+  font-weight: 300;
+
+  .emotion {
+    display: inline-block;
+    fill: $main-color;
+    margin: 0 20px;
+  }
+
+  &.transparent {
+    background: white;
+    color: black;
+  }
+}
+
+.socials {
+  svg {
+    transition: .2s all;
+  }
+
+  li {
+    margin: 0 10px;
+    &:hover, &:focus {
+      svg {
+        fill: $main-color;
+      }
+    }
+  }
+}
+
+.absolute-footer {
+  position: absolute;
+  bottom: 0;
+  width: 75%;
+  color: black;
+  left: 0;
+  background: none;
+  z-index: 1;
+}
+
+@media all and (max-width: 767px) {
+  .footer {
+    padding: 10px 0 5px;
+
+    .container {
+      flex-flow: row wrap;
+    }
+
+    .emotion {
+      display: block;
+      margin: 5px auto;
+    }
+
+    p, .socials {
+      width: 100%;
+      text-align: center;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+}

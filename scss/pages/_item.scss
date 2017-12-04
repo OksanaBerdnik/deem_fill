@@ -1,0 +1,39 @@
+.item-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.option {
+  background-color: rgba($main-color,.3);
+  padding: 3rem;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.options {
+  .small-title {
+    text-transform: none;
+  }
+
+  li {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+.item-description {
+  & > p {
+    margin-bottom: 4rem;
+  }
+}
+
+@media all and (max-width: 559px) {
+  .options li {
+    width: 48%;
+  }
+}

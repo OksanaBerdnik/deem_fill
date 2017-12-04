@@ -1,0 +1,70 @@
+button, input[type=submit] {
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+.btn {
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: .2s all;
+  padding: 20px 4.5rem;
+  font-size: 12px;
+  text-align: center;
+}
+
+.btn-active {
+  border: 2px solid $main-color;
+  background: transparent;
+  color: $main-color;
+
+  &:hover, &:focus {
+    background-color: $main-color;
+    color: white;
+  }
+}
+
+.overlay, .slick-slider {
+  .btn-active {
+    background-color: rgba(8, 8, 8, 0.8);
+
+    &:hover, &:focus {
+      background-color: rgba(8, 8, 8, 1);
+      color: $main-color;
+    }
+  }
+
+  .disable {
+    color: rgba(255, 255, 255, 0.3);
+
+    &:hover, &:focus {
+      color: white;
+    }
+  }
+}
+
+.disable {
+  color: rgba(0, 0, 0, 0.7);
+
+  &:hover, &:focus {
+    color: #000;
+  }
+}
+
+.submit {
+  padding: 10px;
+  border: 2px solid $main-color;
+  color: $main-color;
+  cursor: pointer;
+  transition: .2s all;
+
+  &:hover, &:focus {
+    background-color: $main-color;
+    color: white;
+  }
+}
+
+@media all and (max-width: 559px) {
+  .btn {
+    padding: 12px 2.5rem;
+  }
+}

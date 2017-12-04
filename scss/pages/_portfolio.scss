@@ -1,0 +1,284 @@
+.portfolio-item {
+  max-width: 1220px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.portfolio {
+  height: 100%;
+
+  .slick-slide {
+    width: 75vw;
+    overflow: hidden;
+    position: relative;
+    transition: .4s all;
+
+    .btn {
+      position: absolute;
+      z-index: 1;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: none;
+    }
+  }
+
+  &__article {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px 80px;
+    color: white;
+    font-size: 12px;
+    line-height: 2;
+    position: relative;
+    z-index: 1;
+    width: 75%;
+    font-weight: 300;
+    margin-top: 40px;
+    display: none;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  p {
+    line-height: 2;
+  }
+
+  &.slick-dotted.slick-slider {
+    margin: 0;
+  }
+
+  .slick-dots {
+    width: initial;
+    display: none !important;
+    right: 0;
+    bottom: 50%;
+    transform: translateY(50%);
+    padding: 0 20px;
+
+    &:before, &:after {
+      display: block;
+      content: '';
+      background: white;
+      width: 20px;
+      height: 1.1px;
+      position: absolute;
+      top: 50%;
+    }
+
+    &:before {
+      left: 4px;
+    }
+
+    &:after {
+      right: 4px;
+    }
+
+    li {
+      width: 11px;
+      height: 11px;
+      vertical-align: middle;
+      border: 1px solid white;
+      overflow: hidden;
+    }
+
+    button {
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  .slick-active {
+      background: white;
+
+    .portfolio__article {
+    }
+  }
+
+  .slick-center.slick-current {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+
+    &:after {
+      content: none;
+    }
+
+    .btn {
+      display: block;
+    }
+
+    &:hover {
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: block;
+        top: 0;
+        left: 0;
+      }
+
+      .see-more {
+        display: block;
+        position: relative;
+        z-index: 1;
+      }
+
+      .btn {
+        display: none;
+      }
+
+      img {
+        filter: grayscale(1);
+      }
+    }
+  }
+
+  .slick-list, .slick-track {
+    height: 100%;
+  }
+
+  img {
+    min-width: 100%;
+    min-height: 100%;
+    max-width: inherit;
+  }
+}
+
+.arrows {
+  position: absolute;
+  z-index: 10;
+}
+
+.nextArrow {
+  right: 8%;
+  bottom: -220px;
+}
+
+.prevArrow {
+  right: 20%;
+  color: black;
+  bottom: -185px;
+}
+
+.gallery {
+  position: relative;
+  .slick-slide {
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+.article {
+  padding: 60px 0;
+  overflow: hidden;
+  &__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
+
+  &__text {
+    line-height: 2;
+    font-weight: 300;
+  }
+}
+
+.counter {
+  position: absolute;
+  background: white;
+  padding-left: 30px;
+  top: 165px;
+  right: 4%;
+
+  &:after, &:before {
+    content: '';
+    display: block;
+    height: 1.5px;
+    background: $main-color;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:before {
+    width: 20px;
+    left: 0;
+  }
+
+  &:after {
+    width: 150px;
+    left: 65px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .arrows {
+    .line-after, .line-before {
+      &:after, &:before {
+        content: none;
+      }
+    }
+  }
+
+  .article {
+    padding: 15px 10px 15px 0;
+  }
+
+  .portfolio__article {
+    padding: 10px;
+    width: 90%;
+  }
+
+  .portfolio__title {
+    margin-bottom: 10px;
+  }
+
+  .next-arrow-custom__btn {
+    border: none;
+  }
+}
+
+@media all and (max-width: 991px) {
+  .counter {
+    display: none;
+  }
+
+  .nextArrow {
+    width: 20%;
+    bottom: -205px;
+    max-width: 70px;
+    height: 70px;
+  }
+
+  .prevArrow {
+    display: none !important;
+  }
+}
+@media all and (max-width: 559px) {
+  .arrows {
+    font-size: 0;
+  }
+
+  .nextArrow {
+    right: 2%;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .portfolio {
+    .slick-dots {
+      display: block !important;
+    }
+  }
+}
