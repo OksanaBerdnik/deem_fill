@@ -1,0 +1,19 @@
+article.half-block {
+  p {
+    line-height: 2;
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.photo-block {
+  overflow: hidden;
+  position: relative;
+}
+
+@media all and (max-width: 767px) {
+  .photo-block {
+    display: none;
+  }
+}

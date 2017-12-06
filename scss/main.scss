@@ -12,8 +12,12 @@
 @import "components/_form_elements";
 @import 'components/_header';
 @import 'components/_footer';
+@import 'components/_article';
+@import 'components/_testimonials';
+@import 'components/_pagination';
 
 @import 'pages/homepage';
 @import 'pages/portfolio';
-@import 'pages/design';
-@import 'pages/item';
+@import 'pages/contacts';
+@import 'pages/about';
+@import 'pages/_blog';

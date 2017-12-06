@@ -1,0 +1,42 @@
+.blog-article {
+  background: white;
+  padding: 0;
+  margin-bottom: 20px;
+  max-width: 1200px;
+
+  img {
+    width: 100%;
+  }
+
+  &__text {
+    padding: 25px;
+  }
+
+  &__img {
+    position: relative;
+  }
+
+  p {
+    line-height: 2;
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.item-info {
+  width: 75%;
+  max-width: 610px;
+  background-color: rgba(220, 31, 78, 0.8);
+  padding: 100px 50px;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+@media all and (max-width: 767px) {
+  .item-info {
+    padding: 30px;
+    width: 100%;
+  }
+}

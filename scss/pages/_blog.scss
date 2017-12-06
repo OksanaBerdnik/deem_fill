@@ -1,0 +1,267 @@
+.blog-nav {
+  padding: 40px 0;
+  background: #e5e5e5;
+  margin-bottom: 50px;
+
+  &__block {
+    input {
+      background: url(/img/search.svg) 5px center no-repeat;
+      background-size: 18px;
+      padding: 10px 15px 10px 30px;
+      margin-right: 10px;
+    }
+  }
+
+  .form-field {
+    margin-bottom: 0;
+    flex-wrap: nowrap;
+  }
+}
+
+.grid-view {
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 150px;
+  &.active {
+    color: $main-color;
+
+    .btn {
+      background: $main-color;
+      color: white;
+    }
+  }
+
+  &:first-child {
+    .btn {
+      margin-left: 20px;
+    }
+  }
+
+  &:last-child {
+    .btn {
+      margin-right: 20px;
+    }
+  }
+}
+
+.posts {
+  align-items: stretch;
+}
+
+.post {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 50px;
+
+  &__line {
+    .post__date {
+      flex-basis: 92px;
+    }
+
+    .post__preview {
+      text-align: right;
+      padding: 0;
+    }
+
+    .post__footer {
+      justify-content: center;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    position: relative;
+
+    .title {
+      margin-bottom: 0;
+    }
+  }
+
+  &__full-width {
+    .post__image {
+      height: 100%;
+    }
+
+    .post__body {
+      display: flex;
+    }
+
+    .post__text {
+      flex-shrink: 8;
+    }
+  }
+
+  &__body {
+    margin-bottom: 30px;
+    height: 100%;
+    background: white;
+  }
+
+  &__only-img {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    min-height: 260px;
+
+    .title {
+      position: relative;
+      z-index: 1;
+      line-height: 3;
+      padding: 20px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__only-text {
+    background: transparent;
+  }
+
+  &__text{
+    padding: 20px 25px;
+
+    p {
+      font-weight: 300;
+      line-height: 2;
+    }
+  }
+
+  &__image {
+    position: relative;
+    min-height: 260px;
+    overflow: hidden;
+  }
+
+  .btn {
+    flex-shrink: 0;
+    padding: 13px 22px;
+  }
+
+  &__date {
+    border: 1px solid $main-color;
+    width: 92px;
+    text-align: center;
+    padding: 5px 0;
+    flex-shrink: 0;
+
+    span {
+      color: $main-color;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+
+  &__preview {
+    width: 50%;
+    padding: 0 10px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__footer {
+    flex-wrap: nowrap;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .blog-nav {
+    padding: 10px 0;
+    margin-bottom: 20px;
+
+    &__block {
+      justify-content: center;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .post {
+    &__header {
+      flex-wrap: wrap;
+
+      .title {
+        margin-bottom: 10px;
+        width: 100%;
+      }
+
+      .post__preview {
+        width: initial;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 991px) {
+  .post__preview {
+    text-align: center;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .post__full-width .post__preview {
+    text-align: left;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .post__footer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .post__preview {
+    margin: 10px 0;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .post {
+    &__line {
+      .post__body {
+        display: flex;
+        align-items: center;
+      }
+
+      .post__image {
+        height: 100%;
+        width: calc(50% - 46px);
+        flex-shrink: 0;
+      }
+
+      .post__footer {
+        position: relative;
+
+        &:before {
+          content: '';
+          display: block;
+          width: 2px;
+          height: 25px;
+          position: absolute;
+          left: 50%;
+          bottom: 33px;
+          background: $main-color;
+        }
+      }
+    }
+
+    &__header {
+      &:after {
+        content: '';
+        display: block;
+        width: 2px;
+        height: 25px;
+        position: absolute;
+        left: 50%;
+        bottom: -30px;
+        background: $main-color;
+      }
+    }
+  }
+}

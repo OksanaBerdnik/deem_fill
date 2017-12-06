@@ -7,17 +7,16 @@ button, input[type=submit] {
   font-weight: 700;
   text-transform: uppercase;
   transition: .2s all;
-  padding: 20px 4.5rem;
+  padding: 13px;
   font-size: 12px;
   text-align: center;
 }
 
 .btn-active {
-  border: 2px solid $main-color;
-  background: transparent;
+  background: white;
   color: $main-color;
 
-  &:hover, &:focus {
+  &:hover, &:focus, &.active {
     background-color: $main-color;
     color: white;
   }
@@ -50,21 +49,23 @@ button, input[type=submit] {
   }
 }
 
-.submit {
-  padding: 10px;
-  border: 2px solid $main-color;
-  color: $main-color;
-  cursor: pointer;
+.btn-main {
+  color: white;
+  background-color: $main-color;
   transition: .2s all;
 
   &:hover, &:focus {
-    background-color: $main-color;
-    color: white;
+    background-color: #b90528;
   }
 }
 
-@media all and (max-width: 559px) {
-  .btn {
-    padding: 12px 2.5rem;
+.btn-grey {
+  color: #a9a9a9;
+  background-color: white;
+  transition: .2s all;
+
+  &:hover, &:focus, &.active {
+    background-color: #a9a9a9;
+    color: white;
   }
 }

@@ -1,5 +1,19 @@
 .main-page {
   min-height: calc(100% - 225px);
+
+  &_pd {
+    min-height: calc(100% - 225px);
+    background: $main-color;
+
+    .container {
+      padding-bottom: 0;
+    }
+  }
+
+  &_blog {
+    min-height: calc(100% - 225px);
+    background-color: #efefef;
+  }
 }
 
 .static-page {
@@ -58,5 +72,13 @@
 
   .static-page {
     height: calc(100% - 60px);
+  }
+}
+
+@media all and (min-width: 768px) {
+  .main-page {
+    &_pd {
+      padding-top: 50px;
+    }
   }
 }

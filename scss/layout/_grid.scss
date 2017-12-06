@@ -34,6 +34,12 @@
 .xs50 {
   width: 50%;
 }
+.xs60 {
+  width: 60%;
+}
+.xs70 {
+  width: 70%;
+}
 .xs75 {
   width: 75%;
 }
@@ -42,6 +48,12 @@
 }
 
 @media all and (min-width: 768px) {
+  .sm20 {
+    width: 20%;
+  }
+  .sm30 {
+    width: 30%;
+  }
   .sm33 {
     width: 33.33333%;
   }
@@ -57,13 +69,25 @@
 }
 
 @media all and (min-width: 992px) {
-  .md23 {
-    width: 23%;
+  .md20 {
+    width: 20%;
+  }
+  .md30 {
+    width: 30%;
+  }
+  .md38 {
+    width: 38%;
+  }
+   .md50 {
+    width: 50%;
   }
   .md48 {
     width: 48%;
   }
-  .md50 {
-     width: 50%;
+  .md58 {
+    width: 58%;
+  }
+  .md60 {
+     width: 60%;
   }
 }
