@@ -1,0 +1,45 @@
+.item-page {
+  margin-bottom: 0;
+  padding-bottom: 25px;
+}
+
+@media all and (min-width: 768px) {
+  .item-carousel {
+    &.slick-slider {
+      margin-bottom: 0;
+    }
+
+    .arrows {
+      bottom: 50%;
+      transform: translateY(50%);
+    }
+
+    .arrows-l {
+      left: 0;
+    }
+
+    .arrows-r {
+      right: 0;
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .item-carousel {
+    &.slick-slider {
+      margin-bottom: 130px;
+    }
+
+    .arrows {
+      bottom: 25px;
+    }
+
+    .arrows-l {
+      left: calc(50% - 110px);
+    }
+
+    .arrows-r {
+      left: calc(50% + 10px);
+    }
+  }
+}

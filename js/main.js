@@ -35,6 +35,17 @@ $(function() {
 
     });
 
+    $('.item-carousel').slick({
+        slidesToShow: 1,
+        slideToScroll: 1,
+        dots: false,
+        autoplay: false,
+        // variableWidth: true,
+        nextArrow: '<button type="button" class="arrows arrows-r customArrow"><svg height="50" width="50"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#nextArrow"></use></svg></button>',
+        prevArrow: '<button type="button" class="arrows arrows-l customArrow"><svg height="50" width="50"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow_left"></use></svg></button>'
+
+    });
+
     $('.to').each(function() {
         var slideNumber = $(this).closest('.portfolio-item').find('.slick-slide:not(.slick-cloned)').length;
         $(this).html(slideNumber);
