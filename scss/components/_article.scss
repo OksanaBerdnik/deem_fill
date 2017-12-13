@@ -34,6 +34,17 @@
   z-index: 1;
 }
 
+.article-header {
+  padding: 50px 10px 20px;
+  &:after {
+    display: none !important;
+  }
+
+  .post__preview {
+    width: initial;
+  }
+}
+
 @media all and (max-width: 767px) {
   .item-info {
     padding: 30px;
