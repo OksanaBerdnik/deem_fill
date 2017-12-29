@@ -33,11 +33,12 @@ input[type=submit], button {
     color: #000;
     font-size: 14px;
     font-weight: 400;
-    border: 2px solid black;
+    border: 1px solid black;
     background: transparent;
 
     &:focus, &:hover {
       border-color: $main-color;
+      box-shadow: inset 0px -1px 0px 0px rgba(206,0,58,1);
     }
 
     &:focus::-webkit-input-placeholder {
@@ -69,6 +70,7 @@ input[type=submit], button {
     &::-webkit-input-placeholder {
       font-family: $main-font;
       color: #080808;
+      opacity: 0.7;
       font-size: 12px;
       font-weight: 400;
       font-style: italic;

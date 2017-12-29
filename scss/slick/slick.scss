@@ -101,12 +101,12 @@
 
 
 .next-arrow-custom {
-    background-color: rgba(220, 31, 78, 0.8);
+    background-color: rgba(0, 0, 0, 0.1);
     position: absolute;
     height: 100%;
     top: 0;
     right: 0;
-    width: 25vw;
+    width: 20vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -127,4 +127,11 @@
     color: white;
     width: 100px;
     height: 100px;
+}
+
+@media all and (min-width: 1200px) {
+    .next-arrow-custom__btn {
+        position: relative;
+        left: -30px;
+    }
 }

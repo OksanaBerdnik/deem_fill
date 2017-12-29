@@ -11,7 +11,7 @@ $(function() {
         slidesToShow: 1,
         slideToScroll: 1,
         dots: true,
-        autoplay: true,
+        autoplay: false,
         variableWidth: true,
         nextArrow: '<div class="next-arrow-custom">' +
             '<button type="button" class="next-arrow-custom__btn">' +

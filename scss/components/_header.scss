@@ -79,6 +79,10 @@
     }
   }
 
+  span {
+    font-weight: 300;
+  }
+
   a, span {
     line-height: 1;
   }
@@ -288,5 +292,23 @@
   .logo {
     width: 100%;
     height: 60px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .main-link__item {
+    font-size: 13px;
+  }
+
+  .header .header {
+    font-size: 15px;
+  }
+
+  .header {
+    .logo {
+      img {
+        max-height: 125px;
+      }
+    }
   }
 }

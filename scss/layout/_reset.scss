@@ -69,3 +69,9 @@ svg {
 address {
   font-style: normal;
 }
+
+@media all and (min-width: 1200px) {
+  body {
+    font-size: 16px;
+  }
+}
